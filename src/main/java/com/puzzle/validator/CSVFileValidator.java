@@ -1,7 +1,7 @@
-package validator;
+package com.puzzle.validator;
 
-import exception.EmptyFileException;
-import utils.MessagesConstant;
+import com.puzzle.exception.EmptyFileException;
+import com.puzzle.utils.MessagesConstant;
 
 import java.io.*;
 import java.util.ArrayList;

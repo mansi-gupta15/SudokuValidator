@@ -1,7 +1,6 @@
-package validator;
+package com.puzzle.validator;
 
-import utils.MessagesConstant;
-
+import com.puzzle.utils.MessagesConstant;
 import java.util.HashSet;
 
 public class SudokuGridSizeValidator {

@@ -1,4 +1,4 @@
-package utils;
+package com.puzzle.utils;
 
 public class MessagesConstant {
     public static final String NO_FILE = "Error: Please provide 1 filename..";

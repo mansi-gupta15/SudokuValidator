@@ -1,6 +1,6 @@
-package validator;
+package com.puzzle.validator;
 
-import exception.EmptyFileException;
+import com.puzzle.exception.EmptyFileException;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;

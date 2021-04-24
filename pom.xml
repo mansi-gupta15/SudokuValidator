@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Sudoku</mainClass>
+                            <mainClass>com.puzzle.Sudoku</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

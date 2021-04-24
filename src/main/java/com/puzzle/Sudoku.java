@@ -1,5 +1,7 @@
-import utils.MessagesConstant;
-import validator.CSVFileValidator;
+package com.puzzle;
+
+import com.puzzle.utils.MessagesConstant;
+import com.puzzle.validator.CSVFileValidator;
 
 public class Sudoku {
 
