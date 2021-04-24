@@ -1,4 +1,0 @@
-exception\EmptyFileException.class
-validator\CSVFileValidator.class
-validator\SudokuGridSizeValidator.class
-Sudoku.class

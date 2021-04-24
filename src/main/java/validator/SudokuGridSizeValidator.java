@@ -1,5 +1,7 @@
 package validator;
 
+import utils.MessagesConstant;
+
 import java.util.HashSet;
 
 public class SudokuGridSizeValidator {
@@ -10,22 +12,22 @@ public class SudokuGridSizeValidator {
     public boolean sudokuGridSizeValidator(Integer[][] cells) {
 
         if (cells.length == 0) {
-            throw new IllegalArgumentException("Error: The file is empty");
+            throw new IllegalArgumentException(MessagesConstant.EMPTY_FILE);
         }
 
         if (cells.length != MAX_SIZE) {
-            throw new IllegalArgumentException("Error: The file must have a total of 9 rows");
+            throw new IllegalArgumentException(MessagesConstant.ROWS_VALIDATION);
         }
 
         if (cells[0].length != MAX_SIZE) {
-            throw new IllegalArgumentException("Error: The file must have a total of 9 columns");
+            throw new IllegalArgumentException(MessagesConstant.COLUMN_VALIDATION);
         }
 
         for(int i = 0; i < 9; i++) {
             for(int j = 0; j < 9; j++) {
-                if(!traverse.add(cells[i][j]+" found in row "+ i) ||
-                  !traverse.add(cells[i][j]+" found in column "+ j) ||
-                  !traverse.add(cells[i][j]+" found in sub box "+ i/3 + "-" + j/3)) {
+                if(!traverse.add(cells[i][j]+ MessagesConstant.FOUND_IN_ROW + i) ||
+                  !traverse.add(cells[i][j]+ MessagesConstant.FOUND_IN_COLUMN + j) ||
+                  !traverse.add(cells[i][j]+ MessagesConstant.FOUND_IN_SUB_BOX + i/3 + "-" + j/3)) {
                     return false;
                 }
             }
