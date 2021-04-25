@@ -6,11 +6,8 @@ import com.puzzle.validator.CSVFileValidator;
 public class Sudoku {
 
     public static void main(String[] args) {
-        if (args.length != 1) {
-            errorMessageHandler(MessagesConstant.NO_FILE);
-        }
         try {
-            boolean isValid = new CSVFileValidator().validate(args[0]);
+            boolean isValid = new CSVFileValidator().validate(args);
             if (!isValid) {
                 errorMessageHandler(MessagesConstant.INVALID_FORMAT);
             } else {

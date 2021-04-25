@@ -1,6 +1,7 @@
 package com.puzzle.validator;
 
 import com.puzzle.exception.EmptyFileException;
+import com.puzzle.exception.MissingFileNameException;
 import com.puzzle.utils.MessagesConstant;
 
 import java.io.*;
@@ -13,15 +14,19 @@ public class CSVFileValidator {
 
     boolean isValid = false;
 
-    public boolean validate(String filenameCSV) throws EmptyFileException,IOException {
+    public boolean validate(String[] args) throws EmptyFileException, IOException, MissingFileNameException {
 
+        if (args.length != 1) {
+            throw new MissingFileNameException();
+        }
+        String filenameCSV = args[0];
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filenameCSV);
 
         if (inputStream == null) {
             File file = new File(filenameCSV);
 
             if (!file.exists()) {
-                throw new FileNotFoundException( "Error: Cannot find the file with filename : " + filenameCSV);
+                throw new FileNotFoundException(MessagesConstant.INCORRECT_FILE_NAME + filenameCSV);
             }
             inputStream = new FileInputStream(file);
         }

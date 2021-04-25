@@ -2,6 +2,7 @@ package com.puzzle.utils;
 
 public class MessagesConstant {
     public static final String NO_FILE = "Error: Please provide 1 filename..";
+    public static final String INCORRECT_FILE_NAME = "Error: Cannot find the file with filename : ";
     public static final String EMPTY_FILE = "Error: The file is empty";
     public static final String INVALID_FORMAT = "Error: File is not a valid standard 9x9 Sudoku puzzle";
     public static final String VALID_FORMAT = "Success: File is a valid standard 9x9 Sudoku puzzle";
