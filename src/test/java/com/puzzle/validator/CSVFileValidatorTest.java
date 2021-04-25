@@ -9,6 +9,9 @@ import java.io.IOException;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+/**
+ * Test file to validate Sudoku with multiple inputs.
+ */
 public class CSVFileValidatorTest {
 
     @Test

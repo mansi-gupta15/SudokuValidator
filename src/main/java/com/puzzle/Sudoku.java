@@ -3,6 +3,9 @@ package com.puzzle;
 import com.puzzle.utils.MessagesConstant;
 import com.puzzle.validator.CSVFileValidator;
 
+/**
+ * Main class to validate Sudoku.
+ */
 public class Sudoku {
 
     public static void main(String[] args) {

@@ -4,16 +4,32 @@ import com.puzzle.exception.EmptyFileException;
 import com.puzzle.exception.MissingFileNameException;
 import com.puzzle.utils.MessagesConstant;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Validator for validating file and file content.
+ */
 public class CSVFileValidator {
 
-    boolean isValid = false;
+    private boolean isValid = false;
 
+    /**
+     * @param args
+     * @return
+     * @throws EmptyFileException
+     * @throws IOException
+     * @throws MissingFileNameException
+     */
     public boolean validate(String[] args) throws EmptyFileException, IOException, MissingFileNameException {
 
         if (args.length != 1) {

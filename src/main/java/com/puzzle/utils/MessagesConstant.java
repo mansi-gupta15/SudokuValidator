@@ -1,5 +1,8 @@
 package com.puzzle.utils;
 
+/**
+ * Constant for Messages.
+ */
 public class MessagesConstant {
     public static final String NO_FILE = "Error: Please provide 1 filename..";
     public static final String INCORRECT_FILE_NAME = "Error: Cannot find the file with filename : ";
