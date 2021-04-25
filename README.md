@@ -28,3 +28,17 @@
 5. There should be unit tests covering a range of error conditions and the project should be maven or gradle based. 
    
 6. It should be possible to unpack the code from a zip, generate test report, build it and use a batch file to call the code from a packaged jar.
+
+**INSTRUCTION**
+
+_**In order to build, please use**_
+
+mvn clean install
+
+_**In order to generate report**_
+
+mvn surefire-report:report
+
+_**In order to launch**_
+
+Please use validate.bat or validate.sh
